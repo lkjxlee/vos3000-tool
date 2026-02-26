@@ -1,0 +1,20 @@
+CREATE TABLE numbers_info (
+    caller VARCHAR(64) PRIMARY KEY,
+    used_count INT,
+    valid_count INT                
+);
+
+
+
+
+CREATE TABLE numbers_info (
+    caller VARCHAR(64) PRIMARY KEY,
+    location VARCHAR(255) collate utf8_bin,
+    used_count INT,
+    valid_count INT,
+    status VARCHAR(255) collate utf8_bin,      # 号码状态 ：下架静默，使用中，清洗中，全新
+   timepoint DATE，                                               #启用和下架的时间点
+   gateway_name VARCHAR(255) collate utf8_bin,             #所属网关
+  server_ip  VARCHAR(255),                                                  # 服务器IP
+   number_batch VARCHAR(255) collate utf8_bin              #号码批次              
+);
